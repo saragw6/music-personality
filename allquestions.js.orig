@@ -1,0 +1,427 @@
+<<<<<<< HEAD
+/* Note: Question responses are put in local storage in key value pairs in the
+   following format: {'q#': 'a#'} where the pound signs are replaced with the
+   appropriate number of the question/answer. Local storage is cleared upon page
+   refresh so that answers from previous sessions are not taken into account.
+*/
+
+=======
+var tempo = 0;
+var playing = true;
+var cur_song = 0;
+var totalQ = 2;
+
+// NOTE: Maybe keep these audio files in an array in local storage, but
+// saved as globals for now
+
+
+>>>>>>> yennie_branch
+$(document).ready(function(){
+	cleanLocalStorage();
+	q1submit();
+	q2submit();
+<<<<<<< HEAD
+	//...
+	q20submit();
+=======
+	q3submit();
+	q4submit();
+	q5submit();
+	q6submit();
+	q7submit();	
+>>>>>>> yennie_branch
+});
+
+// Clears answers from any previous session. Need to update totalQ when adding
+// More questions.
+function cleanLocalStorage() {
+<<<<<<< HEAD
+	var totalQ = 2;
+=======
+>>>>>>> yennie_branch
+	for (i = 1; i <= totalQ; i++)
+	{
+		var q = 'q'+i;
+		if (q in localStorage)
+			localStorage.setItem(q, '');
+		else break;
+	}
+}
+
+function disableButton(id) {
+	$(id).attr("disabled", true);
+}
+
+function scrollToElem(id) {
+	$('html, body').animate({
+		scrollTop: $(id).offset().top
+	}, 1500);
+}
+
+function playpause() {
+	if (playing == true) {
+		$('audio').each(function(){
+		    this.pause(); // Stop playing
+		    this.currentTime = 0; // Reset time
+		}); 
+		playing = false;
+	}
+	else {
+		playing = true;
+		playAudio(cur_song);
+	}
+}
+
+function playAudio(questionNumber) {
+
+	$('audio').each(function(){
+	    this.pause(); // Stop playing
+	    this.currentTime = 0; // Reset time
+	}); 
+
+	for (var i = 2; i <= questionNumber; i++) {
+		var currAudio = document.getElementById(localStorage[i]);
+		currAudio.playbackRate = tempo;
+		if (i == questionNumber) {
+			currAudio.volume = 1;
+		}
+		if (i == 5) {
+			currAudio.volume = .15
+		}
+		else {
+			currAudio.volume = .5;
+		}
+		currAudio.play();
+	}
+}
+
+
+function q1submit() {
+	$('#q1submit').click(function(event){
+		if ($('#name').prop('value')) {
+			var name = $('#name').prop('value');
+			var nameLetters = name.split("");
+			localStorage.setItem('q1', name[0]);
+			console.log(localStorage.getItem('q1'));
+			disableButton("#q1submit");
+			scrollToElem("#question2");
+			$("#unanswered1").html("");
+			endpage();
+		}
+		else alert("Please enter a name");
+	});
+}
+
+function q2submit() {
+	var q2_audio = document.getElementById("snare");
+	$('#q2submit').click(function(event){
+		if ($('#q2a1').prop('checked')) {
+<<<<<<< HEAD
+			localStorage.setItem('q2', 'a1');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+			$("#unanswered2").html("");
+			endpage();
+		}
+		else if ($('#q2a2').prop('checked')) {
+			localStorage.setItem('q2', 'a2');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+			$("#unanswered2").html("");
+			endpage();
+		}
+		else if ($('#q2a3').prop('checked')) {
+			localStorage.setItem('q2', 'a3');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+			$("#unanswered2").html("");
+			endpage();
+		}
+		else if ($('#q2a4').prop('checked')) {
+			localStorage.setItem('q2', 'a4');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+			$("#unanswered2").html("");
+			endpage();
+		}
+		else if ($('#q2a5').prop('checked')) {
+			localStorage.setItem('q2', 'a5');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+			$("#unanswered2").html("");
+			endpage();
+=======
+			tempo = 1.6;
+			localStorage.setItem('q2', 'a1');
+		}
+		else if ($('#q2a2').prop('checked')) {
+			tempo = 1.4;
+			localStorage.setItem('q2', 'a2');
+		}
+		else if ($('#q2a3').prop('checked')) {
+			tempo = 1.2;
+			localStorage.setItem('q2', 'a3');
+		}
+		else if ($('#q2a4').prop('checked')) {
+			tempo = 1;
+			localStorage.setItem('q2', 'a4');
+		}
+		else if ($('#q2a5').prop('checked')) {
+			tempo = 0.6;
+			localStorage.setItem('q2', 'a5');
+		}
+		else {
+			alert('Please select an answer.');
+			scrollToElem("#question2");
+			return;
+		}
+
+		localStorage[2] = "snare";
+		playAudio(2);
+		cur_song = 2;
+		disableButton("#q2submit");
+		$("#unanswered2").html("");
+		endpage();
+		scrollToElem("#question3");
+
+	});
+}
+
+function q3submit() {
+	var q3_audio;
+	$('#q3submit').click(function(event){
+		if (tempo == 0) {
+			alert("Please answer Question 2 first.");
+			scrollToElem("#question2");
+			return;
+		}
+		else if ($('#q3a1').prop('checked')) {
+			q3_audio = "bass1";
+			disableButton("#q3submit");
+		}
+		else if ($('#q3a2').prop('checked')) {
+			q3_audio = "bass2";
+			disableButton("#q3submit");
+		}
+		else if ($('#q3a3').prop('checked')) {
+			q3_audio = "bass3";
+			disableButton("#q3submit");
+		}
+		else {
+			alert('Please select an answer.');
+			scrollToElem("#question3");
+			return;
+		}
+
+		localStorage[3] = q3_audio;
+		playAudio(3);
+		cur_song = 3;
+		scrollToElem("#question4");
+
+	});
+}
+
+function q4submit() {
+	var q4_audio;
+	$('#q4submit').click(function(event){
+		if (tempo == 0) {
+			alert("Please answer Question 2 first.");
+			scrollToElem("#question2");
+			return;
+		}
+		else if ($('#q4a1').prop('checked')) {
+			q4_audio = "hihat1";
+			disableButton("#q4submit");
+		}
+		else if ($('#q4a2').prop('checked')) {
+			q4_audio = "hihat2";
+			disableButton("#q4submit");
+		}
+		else {
+			alert('Please select an answer.');
+			scrollToElem("#question4");
+			return;
+		}
+
+		localStorage[4] = q4_audio;
+		playAudio(4);
+		cur_song = 4;
+		scrollToElem("#question5");
+
+	});
+}
+
+function q5submit() {
+	var q5_audio;
+	$('#q5submit').click(function(event){
+		if (tempo == 0) {
+			alert("Please answer Question 2 first.");
+			scrollToElem("#question2");
+			return;
+		}
+		else if ($('#q5a1').prop('checked')) {
+			q5_audio = "soprano";
+			disableButton("#q5submit");
+		}
+		else if ($('#q5a2').prop('checked')) {
+			q5_audio = "alto";
+			disableButton("#q5submit");
+		}
+		else if ($('#q5a3').prop('checked')) {
+			q5_audio = "tenor";
+			disableButton("#q5submit");
+		}
+		else {
+			alert('Please select an answer.');
+			scrollToElem("#question5");
+			return;
+		}
+
+		localStorage[5] = q5_audio;
+		playAudio(5);
+		cur_song = 5;
+		scrollToElem("#question6");
+
+	});
+}
+
+function q6submit() {
+	var q6_audio;
+	$('#q6submit').click(function(event){
+		if (tempo == 0) {
+			alert("Please answer Question 2 first.");
+			scrollToElem("#question2");
+			return;
+		}
+		else if ($('#q6a1').prop('checked')) {
+			q6_audio = "castanet";
+			disableButton("#q6submit");
+		}
+		else if ($('#q6a2').prop('checked')) {
+			q6_audio = "woodblocks";
+			disableButton("#q6submit");
+		}
+		else if ($('#q6a3').prop('checked')) {
+			q6_audio = "sleigh";
+			disableButton("#q6submit");
+>>>>>>> yennie_branch
+		}
+		else {
+			alert('Please select an answer.');
+			scrollToElem("#question6");
+			return;
+		}
+<<<<<<< HEAD
+		console.log(localStorage.getItem('q2'));
+		// When replacing this with the music play command, we need to make sure
+		// We're playing within the if blocks, because otherwise we might play an
+		// old answer that was held in local storage. -KM
+	});
+}
+
+function q20submit() {
+	$('#q20submit').click(function(event){
+		if ($('#q20a1').prop('checked')) {
+			localStorage.setItem('q20', 'a1');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+		}
+		else if ($('#q20a2').prop('checked')) {
+			localStorage.setItem('q20', 'a2');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+		}
+		else if ($('#q20a3').prop('checked')) {
+			localStorage.setItem('q20', 'a3');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+		}
+		else if ($('#q20a4').prop('checked')) {
+			localStorage.setItem('q20', 'a4');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+		}
+		else if ($('#q20a5').prop('checked')) {
+			localStorage.setItem('q20', 'a5');
+			disableButton("#q2submit");
+			scrollToElem("#question3");
+		}
+		else {
+			alert('Please select an answer.');
+		}
+		console.log(localStorage.getItem('q20'));
+=======
+
+		localStorage[6] = q6_audio;
+		playAudio(6);
+		cur_song = 6;
+		scrollToElem("#question7");
+
+	});
+}
+
+
+function q7submit() {
+	var q7_audio;
+	$('#q7submit').click(function(event){
+		if (tempo == 0) {
+			alert("Please answer Question 2 first.");
+			scrollToElem("#question2");
+			return;
+		}
+		else if ($('#q7a1').prop('checked')) {
+			q7_audio = "triangle";
+			disableButton("#q7submit");
+		}
+		else if ($('#q7a2').prop('checked')) {
+			q7_audio = "cymbals";
+			disableButton("#q7submit");
+		}
+		else {
+			alert('Please select an answer.');
+			scrollToElem("#question7");
+			return;
+		}
+
+		localStorage[7] = q7_audio;
+		playAudio(7);
+		cur_song = 7;
+		scrollToElem("#question8");
+>>>>>>> yennie_branch
+
+	});
+}
+
+<<<<<<< HEAD
+function endpage() {
+	var allAnswered = true;
+	for (i = 1; i <= 2; i++) // update with 20 when all questions are inserted
+=======
+
+function endpage() {
+	var allAnswered = true;
+	for (i = 1; i <= totalQ; i++) // update with 20 when all questions are inserted
+>>>>>>> yennie_branch
+	{
+		var u = "#unanswered" + i
+		if ($(u).html() != "")
+			allAnswered = false;
+	}
+
+	if (allAnswered == true)
+	{
+		$('#endTitle').html("Finish your quiz...");
+		var buttons = '<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%">'
+<<<<<<< HEAD
+			+ '<input type="submit" id="finish" style="margin-top:20px;" class="btn btn-default" value="FINISH">'
+			+ '</div>';
+		$('#endBody').html(buttons);
+	}
+}
+=======
+		+ '<input type="submit" id="finish" style="margin-top:20px;" class="btn btn-default" value="FINISH">'
+			+ '</div>';
+		$('#endBody').html(buttons);
+	}
+}
+>>>>>>> yennie_branch

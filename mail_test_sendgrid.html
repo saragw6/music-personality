@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!--Setup for Bootstrap taken from http://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+
+<html lang='en'>
+	<head>
+		<title>20/20 | Quiz</title>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<!-- <link rel='stylesheet' href='heartbeat_test_2.css'> -->
+		<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+		<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+		<script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+		<!-- <script src = 'heartbeat_test_2.js'> </script>	-->
+	</head>
+
+	<body>
+		<!-- <a href="mailto:ronnatenbrink@gmail.com">20 test SUCCEEDED!</a> -->
+		<p>Hey there</p>
+		<script>
+			// $('#yourButtonId').click(function() {
+				$.ajax({
+					type: 'POST',
+					url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+					data: {
+					    'key': '2s-MbFWf1DI6YYfwM23_sA',
+					    'message': {
+					    	'from_email': 'vionini@gmail.com',
+					    	'from_name': 'Ronna',
+					    	'to': [
+					        	{
+					            	'email': 'ronnatenbrink@gmail.com',
+					            	'name': 'You (OPTIONAL)',
+					            	'type': 'to'
+					        	}
+					        	// {
+					         //    	‘email’: ‘RECIPIENT_NO_2@EMAIL.HERE’,
+					         //    	‘name’: ‘ANOTHER RECIPIENT NAME (OPTIONAL)’,
+					         //    	‘type’: ‘to’
+					        	// }
+					        ],
+					    	'autotext': 'true',
+					    	'subject': 'YOUR SUBJECT HERE!',
+					    	'text' : 'EMAIL CONTECNT WOOHOO'
+					    	// 'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+						}
+					}
+				}).done(function(response) {
+				console.log(response); // if you're into that sorta thing
+				console.log('end of code');
+				});
+			// });
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

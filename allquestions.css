@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:800,600);
+
+body {
+	position: relative;
+	background-color: black;
+}
+
+ul {
+	text-align:center;
+}
+
+.radio {
+	text-align:left;
+	color: white;
+}
+
+.btn btn-bock{
+	color:orange;
+}
+
+#text {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.8); 
+}
+
+.qtitle {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+	color:white;
+	margin-bottom:40px;
+}
+
+#subtitle {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	text-align: center;
+	color:white;
+	margin-bottom:40px;
+}
+
+
+#question1 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #E27A3F;
+}
+
+#question2 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #45B29D;
+	text-align:center;
+}
+
+#question3 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #EFC94C;
+}
+#question4 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #3366FF;
+}
+#question5 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #FF6666;
+}
+#question6 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #663399;
+}
+#question7 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #880000;
+}
+#question8 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #99CCFF;
+}
+#question9 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #7d7de8;
+}
+#question10 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #a32985;
+}
+
+#question11 {
+	padding-top:50px;
+	padding-left:25%;
+	padding-right:25%;
+	height:100vh;
+	background-color: #002633;
+}
+
+#end {
+ 	padding-top:50px;
+ 	padding-left:25%;
+ 	padding-right:25%;
+ 	height:100vh;
+ 	color: #fff;
+ 	background-color: black;
+ }
+
+ #endTitle {
+ 	font-family: 'Raleway', sans-serif;
+ 	font-weight: 800;
+ 	text-align: center;
+ 	text-transform: uppercase;
+ 	color:white;
+ 	margin-bottom:40px;
+ }
+#endTitle_mobile {
+ 	font-family: 'Raleway', sans-serif;
+ 	font-weight: 400;
+ 	text-align: center;
+ 	text-transform: uppercase;
+ 	color:white;
+ 	margin-bottom:20px;
+ }

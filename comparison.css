@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:800,600);
+
+.outer {
+    background-color: #E8E8E8;
+}
+
+.qTitle {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.8); /*black with 80% opacity*/
+    padding-top: 50px;
+}
+
+ol {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8); /*black with 80% opacity*/
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8); /*black with 80% opacity*/
+}
+
+nav {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .canvas {
+        text-align:center;
+        float:none !important;
+    }
+    .col-sm-7 {
+        text-align:center;
+    }
+    .container-fluid {
+        width:100%;
+    }
+    .row {
+        padding-top: 50px;
+        margin-top:20px;
+        padding-bottom: 50px;
+        background-color: white;
+    }
+    .title {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.8); /*black with 80% opacity*/
+        padding-top:100px;
+        text-decoration: underline #45B29D;
+    }
+}
+@media (min-width: 768px) {
+    .canvas {
+        float:right !important;
+        width:100% !important;
+        text-align:right;
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .col-sm-7 {
+        text-align:left;
+    }
+    .container-fluid {
+        width:70%;
+        padding-bottom:50px;
+    }
+    .row {
+        padding-top: 50px;
+        margin-top:20px;
+        padding-bottom: 50px;
+        background-color: white;
+        border-radius: 25px;
+    }
+    .title {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.8); /*black with 80% opacity*/
+        padding-top:50px;
+        text-decoration: underline #45B29D;
+    }
+}

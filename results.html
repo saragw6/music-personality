@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<!--Setup for Bootstrap taken from http://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+<html lang="en">
+	<head>
+		<title>Nice Song!</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="results.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="results.js"></script>
+
+	</head>
+
+	<body class="outer">
+		<div class="container-fluid">
+	 			<h1 id="title"></h1>
+				<div class="row">
+					<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 300px;">
+						<a onclick="location.href='comparison.html';" style="margin-top:10px;" class="btn btn-default">COMPARE YOUR RESULTS</a>
+						<a onclick="location.href='share.html';" style="margin-top:10px;" class="btn btn-default">SHARE YOUR SONG</a>
+						<a onclick="location.href='songcode.html';" style="margin-top:10px;" class="btn btn-default">LISTEN TO ANOTHER USER'S SONG</a>
+						<a onclick="location.href='allquestions.html';" style="margin-top:10px;" class="btn btn-default">RETAKE THE QUIZ</a>
+					</div>
+					<div>
+						<button type="button" class="btn btn-default btn-sm" id = "ppbutton" onClick="playpause()"><span class="glyphicon glyphicon-pause" id="ppicon"></span></button>
+					</div>
+				</div>
+		</div>
+
+		<audio id = "snare"  loop>
+			<source src = "tracks/snare.mp3" type = "audio/mpeg">
+			<source src = "tracksff/snare.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass1"  loop>
+			<source src = "tracks/bass1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass2"  loop>
+			<source src = "tracks/bass2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass3"  loop>
+			<source src = "tracks/bass3.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "hihat1"  loop>
+			<source src = "tracks/hihat1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/hihat1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "hihat2"  loop>
+			<source src = "tracks/hihat2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/hihat2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "soprano"  loop>
+			<source src = "tracks/clar.mp3" type = "audio/mpeg">
+			<source src = "tracksff/recorder.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "alto"  loop>
+			<source src = "tracks/bassclar.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bassclar.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tenor"  loop>
+			<source src = "tracks/baritone.mp3" type = "audio/mpeg">
+			<source src = "tracksff/baritone.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "castanet"  loop>
+			<source src = "tracks/castanet.mp3" type = "audio/mpeg">
+			<source src = "tracksff/castanet.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "woodblocks"  loop>
+			<source src = "tracks/woodblocks.mp3" type = "audio/mpeg">
+			<source src = "tracksff/woodblocks.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "sleigh"  loop>
+			<source src = "tracks/sleigh.mp3" type = "audio/mpeg">
+			<source src = "tracksff/sleigh.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "triangle"  loop>
+			<source src = "tracks/triangle.mp3" type = "audio/mpeg">
+			<source src = "tracksff/triangle.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "cymbals"  loop>
+			<source src = "tracks/cymbals.mp3" type = "audio/mpeg">
+			<source src = "tracksff/cymbals.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bells_up"  loop>
+			<source src = "tracks/bells_up.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bells_up.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bells_down"  loop>
+			<source src = "tracks/bells_down.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bells_down.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "vib_maj"  loop>
+			<source src = "tracks/vib_maj_arp.mp3" type = "audio/mpeg">
+			<source src = "tracksff/vib_maj_arp.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "vib_min"  loop>
+			<source src = "tracks/vib_min_arp.mp3" type = "audio/mpeg">
+			<source src = "tracksff/vib_min_arp.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam1"  loop>
+			<source src = "tracks/tam1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam2"  loop>
+			<source src = "tracks/tam2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam3"  loop>
+			<source src = "tracks/tam3.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "organ"  loop>
+			<source src = "tracks/organ.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "oboe"  loop>
+			<source src = "tracks/oboe.mp3" type = "audio/mpeg">
+			<source src = "tracksff/oboe.ogg" type = "audio/ogg">
+		</audio>
+
+		
+
+
+	</body>
+</html>

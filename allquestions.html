@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<!--Setup for Bootstrap taken from http://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+
+<html lang="en">
+	<head>
+		<title>20/20 | Quiz</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="allquestions.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=true" type="text/javascript"> </script>
+		<script src = "allquestions.js"> </script>
+		<!-- add favicon -->
+		<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+	</head>
+
+	<!-- scrollable bit -->
+	<body data-spy="scroll" data-target=".navbar" data-offset="50" id="text">
+
+		<audio id = "snare"  loop>
+			<source src = "tracks/snare.mp3" type = "audio/mpeg">
+			<source src = "tracksff/snare.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass1"  loop>
+			<source src = "tracks/bass1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass2"  loop>
+			<source src = "tracks/bass2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass3"  loop>
+			<source src = "tracks/bass3.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "hihat1"  loop>
+			<source src = "tracks/hihat1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/hihat1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "hihat2"  loop>
+			<source src = "tracks/hihat2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/hihat2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "soprano"  loop>
+			<source src = "tracks/clar.mp3" type = "audio/mpeg">
+			<source src = "tracksff/recorder.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "alto"  loop>
+			<source src = "tracks/bassclar.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bassclar.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tenor"  loop>
+			<source src = "tracks/baritone.mp3" type = "audio/mpeg">
+			<source src = "tracksff/baritone.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "castanet"  loop>
+			<source src = "tracks/castanet.mp3" type = "audio/mpeg">
+			<source src = "tracksff/castanet.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "woodblocks"  loop>
+			<source src = "tracks/woodblocks.mp3" type = "audio/mpeg">
+			<source src = "tracksff/woodblocks.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "sleigh"  loop>
+			<source src = "tracks/sleigh.mp3" type = "audio/mpeg">
+			<source src = "tracksff/sleigh.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "triangle"  loop>
+			<source src = "tracks/triangle.mp3" type = "audio/mpeg">
+			<source src = "tracksff/triangle.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "cymbals"  loop>
+			<source src = "tracks/cymbals.mp3" type = "audio/mpeg">
+			<source src = "tracksff/cymbals.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bells_up"  loop>
+			<source src = "tracks/bells_up.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bells_up.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bells_down"  loop>
+			<source src = "tracks/bells_down.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bells_down.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "vib_maj"  loop>
+			<source src = "tracks/vib_maj_arp.mp3" type = "audio/mpeg">
+			<source src = "tracksff/vib_maj_arp.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "vib_min"  loop>
+			<source src = "tracks/vib_min_arp.mp3" type = "audio/mpeg">
+			<source src = "tracksff/vib_min_arp.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam1"  loop>
+			<source src = "tracks/tam1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam2"  loop>
+			<source src = "tracks/tam2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam3"  loop>
+			<source src = "tracks/tam3.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "organ"  loop>
+			<source src = "tracks/organ.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "oboe"  loop>
+			<source src = "tracks/oboe.mp3" type = "audio/mpeg">
+			<source src = "tracksff/oboe.ogg" type = "audio/ogg">
+		</audio>
+
+
+
+		<!-- Navigation bar lists questions -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<ul class="nav navbar-nav">
+				<li><a href="#playpause" onClick="playpause()"><span class="glyphicon glyphicon-pause" id="ppicon"></span></a></li>
+
+   			</ul>
+		</nav>
+
+		<!-- Question 1 - using Bootstrap type Textarea
+			 This lets the user enter text (i.e. their name) -->
+
+		<div id="question1">
+	 		<h1 class='qtitle'>What is your name?</h1>
+			<form>
+	  			<div class="form-group">
+	  				<input type="text" class='form-control' id="name" placeholder="Enter name">
+	  			</div>
+				<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+					<input type="submit" id="q1submit" class="btn btn-default" value="Submit">
+				</div>
+			</form>
+		</div>
+
+				<!-- Question 2 - using Bootstrap type Radiobuttons
+			 This constrains the user to just one selection -->
+		<div id="question2">
+	 		<h1 class='qtitle'>Do you enjoy running?</h1>
+
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q2a1"> HECK YES!
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q2a2"> It's fine, I guess
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q2a3"> 50/50
+				</label>
+				<label class="btn btn-default hidden-xs">
+					<input type="radio" name="answers" id="q2a4"> Only if monsters are chasing me
+				</label>
+				<label class="btn btn-default visible-xs">
+					<input type="radio" name="answers" id="q2a4_m"> If I'm being chased
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q2a5"> I DESPISE IT
+				</label>
+					<input type="submit" id="q2submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+
+			<!--<div class="btn-group-vertical" style="display: static; width: 100%;">
+				<input type="submit" id="q2submit" style="margin-top:20px;" class="btn btn-default" value="submit">
+			</div>-->
+			<!--<button id="q2submit" type="submit" class="btn btn-block" style="margin-top:20px;">Submit</button>-->
+		</div>
+
+		<!-- Question 3 -->
+		<div id="question3">
+ 			<h1 class='qtitle'>How adventurous are you?</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q3a1"> I am a creature of habit
+				</label>
+				<label class="btn btn-default hidden-xs">
+					<input type="radio" name="answers" id="q3a2"> I'll go if someone drags me along
+				</label>
+				<label class="btn btn-default visible-xs">
+					<input type="radio" name="answers" id="q3a2_m"> Sort of
+				</label>
+				<label class="btn btn-default hidden-xs">
+					<input type="radio" name="answers" id="q3a3"> I love seeking out strange new things
+				</label>
+				<label class="btn btn-default visible-xs">
+					<input type="radio" name="answers" id="q3a3_m"> Very adventurous
+				</label>
+				<input type="submit" id="q3submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+		<!-- Question 4 -->
+		<div id="question4">
+ 			<h1 class='qtitle'>Tea or coffee?</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q4a1"> Tea
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q4a2"> Coffee
+				</label>
+				<input type="submit" id="q4submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+		<!-- Question 5 -->
+		<div id="question5">
+ 			<h1 class='qtitle'>Describe the mood of your ideal day.</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q5a1"> Soaring, dreamy
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q5a2"> Peaceful, solemn
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q5a3"> Grounded, confident
+				</label>
+				<input type="submit" id="q5submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+
+		<!-- Question 6 -->
+		<div id="question6">
+ 			<h1 class='qtitle'>How timely are you?</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q6a1"> Early
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q6a2"> Exactly on time
+				</label>
+				<label class="btn btn-default hidden-xs">
+					<input type="radio" name="answers" id="q6a3"> No matter how early I wake up somehow I'm always late
+				</label>
+				<label class="btn btn-default visible-xs">
+					<input type="radio" name="answers" id="q6a3_m"> Always late
+				</label>
+				<input type="submit" id="q6submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+
+
+		<div id="question7">
+ 			<h1 class='qtitle'>How clumsy are you?</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q7a1"> Absolutely dainty
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q7a2"> Major klutz
+				</label>
+				<input type="submit" id="q7submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+		<div id="question8">
+ 			<h1 class='qtitle'>Your personal hero is:</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q8a1"> Anthony Monaco
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q8a2"> Ming Chow
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q8a3"> The Goddess Athena
+				</label>
+				<input type="submit" id="q8submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+
+
+		<div id="question9">
+ 			<h1 class='qtitle'>When ruling your sovereign nation, it is better to be:</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q9a1"> Loved
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q9a2"> Feared
+				</label>
+				<input type="submit" id="q9submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+
+		<div id="question10">
+ 			<h1 class='qtitle'>Is the glass half empty or half full?</h1>
+ 			<!-- form here -->
+			<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+			<label class="btn btn-default">
+					<input type="radio" name="answers" id="q10a1"> Half full
+				</label>
+				<label class="btn btn-default">
+					<input type="radio" name="answers" id="q10a2"> Half empty
+				</label>
+				<input type="submit" id="q10submit" style="margin-top:20px;" class="btn btn-default" value="Submit">
+			</div>
+		</div>
+
+
+
+		<div id="question11" >
+ 			<h1 class='qtitle'> Get My Location </h1>
+ 			<form>
+  			<div class="form-group">
+ 				<input type="button" id="q11_getLoc" class="btn btn-default" value="get my location">
+ 				</div>
+	  			<div class="form-group">
+	  				<input type="text" class='form-control' id="longitude" placeholder="Longitude">
+	  			</div>
+	  			<div class="form-group">
+	  				<input type="text" class='form-control' id="latitude" placeholder="Latitude">
+	  			</div>
+				<div class="btn-group-vertical" data-toggle="buttons" style="display: static; width: 100%;">
+					<input type="submit" id="q11submit" class="btn btn-default" value="Submit">
+				</div>
+			</form>
+		</div>
+
+
+
+		<!-- Reached end of page -->
+ 		<div id="end">
+  			<h1 class = 'hidden-xs' id='endTitle'>You have not completed the following Questions:</h1>
+  			<h1 class = 'visible-xs' id='endTitle_mobile'>You have not completed the following Questions:</h1>
+ 			<!-- If the quiz is incomplete, just displays a list of unanswered questions.
+ 				If the quiz is indeed complete, displays sara's results for choosing
+ 				to download/share mp3, compare results. -->
+ 			<div id="endBody">
+ 				<ul>
+ 					<li><div id="unanswered1"><a href="#question1">Question 1</a></div></li>
+ 					<li><div id="unanswered2"><a href="#question2">Question 2</a></div></li>
+ 					<li><div id="unanswered3"><a href="#question3">Question 3</a></div></li>
+ 					<li><div id="unanswered4"><a href="#question4">Question 4</a></div></li>
+ 					<li><div id="unanswered5"><a href="#question5">Question 5</a></div></li>
+ 					<li><div id="unanswered6"><a href="#question6">Question 6</a></div></li>
+ 					<li><div id="unanswered7"><a href="#question7">Question 7</a></div></li>
+ 					<li><div id="unanswered8"><a href="#question8">Question 8</a></div></li>
+ 					<li><div id="unanswered9"><a href="#question9">Question 9</a></div></li>
+ 					<li><div id="unanswered10"><a href="#question10">Question 10</a></div></li>
+ 					<li><div id="unanswered11"><a href="#question11">Question 11</a></div></li>
+ 				</ul>
+ 			</div>
+ 		</div>
+	</body>
+</html>

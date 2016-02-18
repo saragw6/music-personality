@@ -1,0 +1,24 @@
+1. What we did this week
+    - Added some of our sound files
+    - Added javascript to our allquestions page
+    - Made the page start to interact with the user instead of just being static
+    - Prepared outcomes of user interaction with questions so that we can extract
+      information from what the user selects and prevent them from changing their
+      responses in the way that we want.
+
+2. Challenges that happened this week
+    - Getting the javascript to interact properly
+    - Recognizing our buttons needed to be changed into radio inputs in order
+      to successfully get information from them in the way that we want.
+      Specifically, this was in order to pass the information of which button
+      (answer) was selected, which was troublesome with our previous format in
+      which only the information of “Submit” was passed.
+
+3. Goals for next week
+    - Create rest of the sound files
+    - Get a working set of questions (can do after all sound files prepared)
+    - Work on interaction with local storage
+    - Get javascript to play sound on question selection instead of just alert
+    - Create separate pages for opening/intro page and our results page
+    - Make questions' javascript more modular?
+    - Start thinking about storing/sharing/presenting data on quiz results

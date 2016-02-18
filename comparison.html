@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<!--Chart.js from chartjs.com for displaying data.-->
+
+<html lang="en">
+	<head>
+        <title>Compare Your Results</title>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="comparison.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="Chart.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="comparison.js"></script>
+    </head>
+
+    <body class="outer">
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<ul class="nav navbar-nav">
+				<li><a href="allquestions.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;&nbsp;Retake quiz</a></li>
+   				<li><a href="share.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-share"></span>&nbsp;&nbsp;&nbsp;Share your song</a></li>
+				<li><a href="songcode.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span>&nbsp;&nbsp;&nbsp;Play a song code</a></li>
+			</ul>
+		</nav>
+
+		<div class="container-fluid">
+
+			<h1 class="title"><br />How many others answered like you?<br/><br/></h1>
+
+			<!--QUESTION 2-->
+			<div class="row">
+				<div class="col-sm-5">
+			    	<div class="canvas"><canvas id='q2Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">Do you enjoy running?</span>
+					<ol type = "a">
+						<li>Heck yes!</li>
+						<li>It's fine, I guess</li>
+						<li>50/50</li>
+						<li>Only if monsters are chasing me</li>
+						<li>I despise it</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 3-->
+			<div class="row">
+				<div class="col-sm-5">
+		        	<div class="canvas"><canvas id='q3Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">How adventurous are you?</span>
+					<ol type = "a">
+						<li>I am a creature of habit</li>
+						<li>I'll go if someone drags me along</li>
+						<li>I love seeking out strange new things</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 4-->
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="canvas"><canvas id='q4Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">Tea or coffee?</span>
+					<ol type = "a">
+						<li>Tea</li>
+						<li>Coffee</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 5-->
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="canvas"><canvas id='q5Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">Describe the mood of your ideal day.</span>
+					<ol type="a">
+						<li>Soaring, dreamy</li>
+						<li>Peaceful, solemn</li>
+						<li>Grounded, confident</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 6-->
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="canvas"><canvas id='q6Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">How timely are you?</span>
+					<ol type = "a">
+						<li>Early</li>
+						<li>Exactly on time</li>
+						<li>No matter how early I wake up somehow I'm always late</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 7-->
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="canvas"><canvas id='q7Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">How clumsy are you?</span>
+					<ol type = "a">
+						<li>Absolutely dainty</li>
+						<li>Major klutz</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 8-->
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="canvas"><canvas id='q8Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">Your personal hero is:</span>
+					<ol type = "a">
+						<li>Anthony Monaco</li>
+						<li>Ming Chow</li>
+						<li>The Goddess Athena</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 9-->
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="canvas"><canvas id='q9Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">When ruling your sovereign nation, it is better to be:</span>
+					<ol type = "a">
+						<li>Loved</li>
+						<li>Feared</li>
+					</ol>
+				</div>
+			</div>
+
+			<!--QUESTION 10-->
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="canvas"><canvas id='q10Graph'></canvas></div>
+				</div>
+				<div class="col-sm-7">
+					<span class="qTitle">Is the glass half empty or half full?</span>
+					<ol type = "a">
+						<li>Half full</li>
+						<li>Half empty</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- ALL SONG FILES -->
+		<audio id = "snare"  loop>
+			<source src = "tracks/snare.mp3" type = "audio/mpeg">
+			<source src = "tracksff/snare.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass1"  loop>
+			<source src = "tracks/bass1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass2"  loop>
+			<source src = "tracks/bass2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bass3"  loop>
+			<source src = "tracks/bass3.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bass3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "hihat1"  loop>
+			<source src = "tracks/hihat1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/hihat1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "hihat2"  loop>
+			<source src = "tracks/hihat2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/hihat2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "soprano"  loop>
+			<source src = "tracks/clar.mp3" type = "audio/mpeg">
+			<source src = "tracksff/recorder.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "alto"  loop>
+			<source src = "tracks/bassclar.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bassclar.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tenor"  loop>
+			<source src = "tracks/baritone.mp3" type = "audio/mpeg">
+			<source src = "tracksff/baritone.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "castanet"  loop>
+			<source src = "tracks/castanet.mp3" type = "audio/mpeg">
+			<source src = "tracksff/castanet.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "woodblocks"  loop>
+			<source src = "tracks/woodblocks.mp3" type = "audio/mpeg">
+			<source src = "tracksff/woodblocks.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "sleigh"  loop>
+			<source src = "tracks/sleigh.mp3" type = "audio/mpeg">
+			<source src = "tracksff/sleigh.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "triangle"  loop>
+			<source src = "tracks/triangle.mp3" type = "audio/mpeg">
+			<source src = "tracksff/triangle.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "cymbals"  loop>
+			<source src = "tracks/cymbals.mp3" type = "audio/mpeg">
+			<source src = "tracksff/cymbals.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bells_up"  loop>
+			<source src = "tracks/bells_up.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bells_up.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "bells_down"  loop>
+			<source src = "tracks/bells_down.mp3" type = "audio/mpeg">
+			<source src = "tracksff/bells_down.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "vib_maj"  loop>
+			<source src = "tracks/vib_maj_arp.mp3" type = "audio/mpeg">
+			<source src = "tracksff/vib_maj_arp.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "vib_min"  loop>
+			<source src = "tracks/vib_min_arp.mp3" type = "audio/mpeg">
+			<source src = "tracksff/vib_min_arp.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam1"  loop>
+			<source src = "tracks/tam1.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam1.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam2"  loop>
+			<source src = "tracks/tam2.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam2.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "tam3"  loop>
+			<source src = "tracks/tam3.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "organ"  loop>
+			<source src = "tracks/organ.mp3" type = "audio/mpeg">
+			<source src = "tracksff/tam3.ogg" type = "audio/ogg">
+		</audio>
+		<audio id = "oboe"  loop>
+			<source src = "tracks/oboe.mp3" type = "audio/mpeg">
+			<source src = "tracksff/oboe.ogg" type = "audio/ogg">
+		</audio>
+
+    </body>
+</html>

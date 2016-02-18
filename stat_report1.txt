@@ -1,0 +1,26 @@
+1. What we did this week
+         - Used bootstrap to create the basic design of the quiz page. We have our
+           layout with questions and buttons such that the user experience is
+           prepared but we need to fill in the appropriate questions and connect
+           it to javascript
+
+2. Challenges that happened this week
+         - Getting bootstrap radio buttons and button groups to work
+         - Getting the quiz page to size well based on user's browser size
+
+3. Goals for next week
+         - Learn how to fork for git
+         - Get some of the audio files prepared
+         - Learn to make buttons/radios/forms in bootstrap interact with our
+           javascript and save data to local storage
+         - Create separate pages for opening/intro page and our results/data
+           page
+         - Pick an API
+         - Create a javascript file for the quiz page
+         - Learn how condense MP3s
+         
+#Comments by Ming
+* Why learn how to fork? For...?
+* "Get some of the audio files prepared" --important
+* "Pick an API" --for...?
+* See https://superuser.com/questions/84556/what-is-the-quickest-easiest-way-to-compress-a-mp3-file
