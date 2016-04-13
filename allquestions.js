@@ -468,11 +468,9 @@ function q11submit() {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
+			$('#longitude').attr('value', myLng);
+			$('#latitude').attr('value', myLat);
 		});
-
-		$('#longitude').attr('value', myLng);
-		$('#latitude').attr('value', myLat);
-
 	});
 
 
