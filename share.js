@@ -130,7 +130,6 @@ function postResult() {
 }; //end postResults
 
 function playpause() {
-    console.log("called playpause");
     if (playing == true) {
         var icon = document.getElementById('ppicon');
         icon.className="glyphicon glyphicon-play";
