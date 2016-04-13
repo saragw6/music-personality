@@ -19,6 +19,7 @@
 
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<ul class="nav navbar-nav">
+				<li><a href="#playpause" onClick="playpause()"><span class="glyphicon glyphicon-pause" id="ppicon"></span></a></li>
 				<li><a href="allquestions.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;&nbsp;Retake quiz</a></li>
 				<li><a href="comparison.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;&nbsp;Compare your results</a></li>
 				<li><a href="songcode.html">&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span>&nbsp;&nbsp;&nbsp;Play a song code</a></li>
@@ -46,10 +47,6 @@
 					</fb:login-button>
                     <!-- facebook login button -->
 					<button onclick="postResult()">Share with Facebook</button>
-
-					<div>
-						<button type="button" class="btn btn-default btn-sm" id = "ppbutton" onClick="playpause()"><span class="glyphicon glyphicon-pause" id="ppicon"></span></button>
-					</div>
 				</div>
 		</div>
 

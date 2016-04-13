@@ -1,3 +1,4 @@
+var playing = true;
 var totalQ = 10;
 var tempo = localStorage.getItem('tempo');
 var q11vol = localStorage.getItem('q11vol');
@@ -127,3 +128,22 @@ function postResult() {
     }
   });
 }; //end postResults
+
+function playpause() {
+    console.log("called playpause");
+    if (playing == true) {
+        var icon = document.getElementById('ppicon');
+        icon.className="glyphicon glyphicon-play";
+        $('audio').each(function(){
+            this.pause();     /* Stop playing */
+            this.currentTime = 0; /* Reset time */
+        });
+        playing = false;
+    }
+    else {
+        var icon = document.getElementById('ppicon');
+        icon.className="glyphicon glyphicon-pause";
+        playAudio();
+        playing = true;
+    }
+}

@@ -1,3 +1,4 @@
+var playing = false;
 var totalQ = 10;
 var tempo = 0;
 var q11vol = 0;
@@ -99,6 +100,7 @@ function playAudio() {
 			currAudio.volume = 0.7;
 		}
         currAudio.play();
+        playing = true;
 	}
 }
 
@@ -218,4 +220,32 @@ function q11(num) {
         q11vol = 2;
 
     songs[11] = "organ";
+}
+
+function playpause() {
+    if (playing == true) {
+        var icon = document.getElementById('ppicon');
+        icon.className="glyphicon glyphicon-play";
+        $('audio').each(function(){
+            this.pause();     /* Stop playing */
+            this.currentTime = 0; /* Reset time */
+        });
+        playing = false;
+    }
+    else {
+        if ($('#code').prop('value')) {
+            var code = $('#code').prop('value');
+            var arr = validateCode(code);
+            if (arr == false) {
+                alert("Please enter a valid code");
+                return;
+            }
+            playSong(arr);
+        var icon = document.getElementById('ppicon');
+        icon.className="glyphicon glyphicon-pause";
+        playing = true;
+
+        }
+        else alert("Please enter a code in the given box");
+    }
 }
