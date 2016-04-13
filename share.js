@@ -117,7 +117,7 @@ function postResult() {
   //FB.api('/me/feed', 'post', {message: 'This personality quiz tells you what music describes who you are! My song code is ' + code + '. You can listen to my song or take the quiz. Let me know what you get! http://tuftsdev.github.io/comp20-f2015-team14/'});
   FB.ui({
     method: 'share',
-    href: 'http://tuftsdev.github.io/comp20-f2015-team14/',
+    href: 'http://saragw6.github.io/music-personality/',
   }, function(response){
     console.log(response);
         if (response && !response.error_message) {
