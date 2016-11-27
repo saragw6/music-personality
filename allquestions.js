@@ -7,7 +7,7 @@
 var tempo = 0;
 var playing = true;
 var cur_song = 0;
-var totalQ = 11;
+var totalQ = 10;
 var name = "";
 var q11vol = 0;
 
@@ -27,7 +27,7 @@ $(document).ready(function(){
 	q8submit();
 	q9submit();
 	q10submit();
-	q11submit();
+//	q11submit();
 
 });
 
@@ -451,7 +451,7 @@ function q10submit() {
 		disableButton("#q10submit");
 		$("#unanswered10").html("");
 		endpage();
-		scrollToElem("#question11");
+		scrollToElem("#end");
 
 	});
 }
